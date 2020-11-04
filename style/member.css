@@ -25,71 +25,150 @@
 } */
 
 /* 공통 멤버 섹션 */
-.member{
+.member {
   padding: 120px 32px 50px;
   color: var(--theme-bright3);
   background: #000 url(../images/coffee-mobile.jpg) no-repeat 50% 0;
 }
 
 /* 공통 로그인 제목 및 단락 디자인 */
-.member-headline, .member-text{
+.member-headline,
+.member-text {
   line-height: 1.5;
   margin: 0;
   text-align: center;
 }
-.member-headline{
+
+.member-headline {
   font-size: 3.6rem;
   font-weight: 100;
   margin-top: 50px;
   margin-bottom: 24px;
 }
-.member-text[leng='en']{
+
+.member-text[leng='en'] {
   font-size: 1.8rem;
 }
-.member-text{
+
+.member-text {
   font-size: 1.2rem;
 }
+
 /* 공통 로그인 및 회원가입 폼 */
-.member-form{
+.member-form {
   margin-top: 120px;
 }
+
 /* 공통 멤버 아이디/패스워드 입력 서식 */
-.member-id, .member-password{
+.member-id,
+.member-password {
   position: relative;
   height: 48px;
-  border-bottom: 1px solid currentColor;
 }
-.member-id{
+
+.member-id {
   margin-bottom: 30px;
 }
-.member-password{
+
+.member-password {
   margin-bottom: 15px;
 }
-.member-id label, .member-password label{
+
+.member-id label,
+.member-password label {
   position: absolute;
   left: 0.5em;
   top: 15px;
   font-size: 1.8rem;
+  transition: all 0.2s;
 }
-.member-id input, .member-password input{
+
+.member-id input,
+.member-password input {
   width: 100%;
-  height: 100%;
+  height: 48px;
   background-color: transparent;
   border: 0;
   color: #fff;
   padding: 0 1em;
+  border-bottom: 1px solid currentColor;
 }
-.member-id--error, .member-password--error, .button-password{
+
+.member-id--error,
+.member-password--error {
   display: none;
 }
+
+.member-form .button-password {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  right:0;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+}
+
+/* 공통 멤버 폼 상태 디자인
+    (is--focus, is--valid, is--invalid, is-visible)
+*/
+.is--focus label,
+.is--valid label,
+.is--invalid label {
+  font-size: 1.3rem;
+  transform: translate(-0.5em, -15px);
+}
+
+.member-form .is--invalid {
+  height: 70px;
+}
+.member-form .is--invalid [role="alert"]{
+  display: block;
+  margin-top: 5px;
+}
+
+.member-form .is--valid,
+.member-form .is--invalid {
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+
+.member-form .is--valid {
+  background-image: url(../images/icon-checked.svg);
+}
+
+.member-form .is--invalid {
+  background-image: url(../images/icon-warning.svg);
+}
+.is--focus .button-password{
+  display: block;
+}
+.member-form .button-password .ir {
+  display: block;
+  width: inherit;
+  height: inherit;
+  background: url(../images/icon-visible.svg) no-repeat 50% 50%;
+}
+.member-form .is--visible .button-password .ir {
+  background-image : url(../images/icon-invisible.svg);
+}
+.member-form .is--invalid .button-password {
+  right: 20px;
+}
+
 /* 공통 이메일 저장 */
-.save-email{
+.save-email {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-.save-email input{
+
+.save-email input {
   position: relative;
   z-index: 10;
   width: 16px;
@@ -97,7 +176,7 @@
   opacity: 0;
 }
 
-.save-email .checkbox{
+.save-email .checkbox {
   position: absolute;
   width: 16px;
   height: 16px;
@@ -107,18 +186,21 @@
   background: url(../images/icon-un-checked-square.svg) no-repeat 0 0;
 }
 
-.save-email input:checked + .checkbox{
+.save-email input:checked + .checkbox {
   background: url(../images/icon-checked-square.svg) no-repeat 0 0;
 }
-.save-email label{
+
+.save-email label {
   margin-left: 0.5em;
   cursor: pointer;
 }
+
 /* 공통 로그인/회원가입 버튼 및 링크 */
-.member-form .button-container{
+.member-form .button-container {
   margin-top: 150px;
   user-select: none;
 }
+
 .button-fill,
 .button-stroke {
   position: relative;
@@ -132,6 +214,7 @@
   border-radius: 8px;
   text-align: center;
 }
+
 .button-fill::after,
 .button-stroke::after {
   content: "";
@@ -144,6 +227,7 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
 .button-fill::after {
   background-image: url(../images/icon-arrow-darkblue.svg);
 }
@@ -154,36 +238,44 @@
   margin-bottom: 15px;
   border: 0;
 }
+
 .button-stroke {
   opacity: 0.7;
   border: 1px solid var(--theme-bright3);
   color: var(--theme-bright2);
   background-color: transparent;
 }
+
 .button-stroke:hover,
 .button-stroke:focus {
   opacity: 1;
 }
+
 .button-stroke::after {
   background-image: url(../images/icon-arrow-white.svg);
 }
+
 /* 데스크탑 멤버 섹션 */
-@media all and (min-width: 768px){
-  .member{
+@media all and (min-width: 768px) {
+  .member {
     background-image: url(../images/coffee-desktop.jpg);
   }
+
   /* 데스크탑 멤버 폼 */
-  .member-form{
+  .member-form {
     width: 540px;
     margin: 0 auto;
   }
+
   /* 데스크탑 로그인/회원가입 버튼 및 링크 */
-  .member-form .button-container{
+  .member-form .button-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
   }
-  .member-form .button-fill, .member-form .button-stroke{
+
+  .member-form .button-fill,
+  .member-form .button-stroke {
     width: 260px;
   }
 }
