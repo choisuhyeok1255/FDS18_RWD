@@ -18,7 +18,6 @@
   background-color: var(--theme-secondary);
   text-align: center;
 }
-
 .ediya-recommend-text {
   font-size: 1.4rem;
 }
@@ -91,7 +90,10 @@
 .ediya-notice-headline{
   width:125px;
   flex-shrink: 0;
-  background: var(--theme-primary) linear-gradient(137deg, var(--color-gradient-start) 5%, var(--color-gradient-end) 100%);
+  background: var(--theme-primary) 
+              linear-gradient(137deg, 
+              var(--color-gradient-start) 5%, 
+              var(--color-gradient-end) 100%);
   color: var(--theme-bright);
   font-weight: 700;
   margin: 0;
