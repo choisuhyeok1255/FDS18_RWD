@@ -1,0 +1,62 @@
+body{
+  
+}
+.brand{
+  width: 100px;
+}
+
+/* 데스크탑 */
+@media all and (min-width:768px){
+  .app-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 780px;
+    margin: 0 auto;
+  }
+  .reset-list{
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .reset-list li{
+    margin-left: 10px;
+  }
+  .is-open-menu{
+    display: none;
+  }
+}
+
+/* 모바일 */
+@media all and (max-width:767px){
+  .app-header-container{
+    position: relative;
+  }
+  .app-navigation{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 80px;
+    position: fixed;
+    top: 0;
+    background: hsla(225, 57%, 10%, 0.9);
+    opacity: 0.9;
+    z-index: 10;
+  }
+  .reset-list li{
+    padding: 10px 0;
+    font-size: 1.8rem;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .reset-list a{
+    margin-left: 20px;
+  }
+  .is-close-menu{
+    position: absolute;
+    top:20px;
+    right: 40px;
+    background: transparent;
+    color: #fff;
+  }
+}

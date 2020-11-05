@@ -1,0 +1,38 @@
+.app-main{
+}
+
+.ediya-recommend-container{
+  background-color: #bae5fb;
+  text-align: center;
+}
+
+.ediya-recommend-text {
+  font-size: 30px;
+}
+.theme-blue{
+  color:blue;
+}
+.ediya-recommend{
+  position: relative;
+  background: yellow;
+}
+.ediya-recommend-beverage{
+  position: absolute;
+}
+.ediya-recommend-beverage:last-child{
+  position: absolute;
+}
+
+
+/* 데스크탑 */
+@media all and (min-width:768px){
+
+}
+
+/* 모바일 */
+@media all and (max-width:767px){
+.theme-blue{
+  display: block;
+
+}
+}
