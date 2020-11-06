@@ -1,0 +1,73 @@
+/* 모바일 */
+.beverage{
+  padding:20px;
+}
+.ediya-menu{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.ediya-menu__item{
+  position: relative;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+}
+.ediya-menu__item figure{
+  text-align: center;
+  margin: 0;
+}
+.ediya-menu__item img {
+  transform: scale(0.8);
+  transition: all 0.4s;
+}
+.ediya-menu__item img:hover{
+  transform: scale(1);
+}
+
+.ediya-menu__item--detail{
+  background: yellow;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.ediya-menu__item--name span{
+  display: block;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+.ediya-menu__item--multi-column{
+  column-count: 2;
+}
+.ediya-menu__item--multi-column dl,
+.ediya-menu__item--multi-column dt, 
+.ediya-menu__item--multi-column dd{
+  padding: 0;
+  margin: 0;
+}
+.ediya-menu__item--multi-column dt, 
+.ediya-menu__item--multi-column dd{
+  width: 80px;
+}
+.ediya-menu__item--multi-column dl{
+  
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+
+
+
+/* 데스크탑 */
+@media all and (min-width: 768px) {
+  
+  .ediya-menu{
+    width: 740px;
+    margin: 0 auto;
+  }
+  .ediya-menu__item{
+    margin-left: 15px;
+  }
+}
